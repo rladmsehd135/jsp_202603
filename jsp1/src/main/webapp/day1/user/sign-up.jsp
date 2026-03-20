@@ -7,15 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<!-- 11_sign-up -->
-	
-	<!-- 아이디, 비밀번호, 비밀번호 확인, 이름, 나이를 입력받아서 -->
-	<!--submit실행시 12_sign-up-result.jsp 로 보내기 -->
-	<!-- 모든 은값 빈값 X -->
-	<!-- 비밀번호 ,비밀번호 확인은 같은 값 -->
-	<!-- 12_sign-up-result.jsp 아아디 : ooo, 이름 : ooo -->
-	
-	<form action=12_sign-up-result.jsp name="sign" method="get">
+
+	<form action="sign-up-result.jsp" name="sign" method="get">
 		<div>
 		<label>아이디 : <input name = "userId"></label>
 		</div>
@@ -29,14 +22,9 @@
 		<label>이름 : <input name = "name"></label>
 		</div>
 		<div>
-		<label>나이 : <input name = "age"></label>
-		</div>
-		<div>
-			<label><input type = "checkbox" name ="hobby" value="코딩">코딩</label>
-			<label><input type = "checkbox" name ="hobby" value="유튜브 감상">유튜브 감상</label>
-			<label><input type = "checkbox" name ="hobby" value="독서">독서</label>
-			<label><input type = "checkbox" name ="hobby" value="운동">운동</label>
-			<label><input type = "checkbox" name ="hobby" value="게임">게임</label>
+			성별
+			<label><input type = "radio" value="M" name="gender" checked>남자</label>
+			<label><input type = "radio" value="F" name="gender">여자</label>
 		</div>
 		<div>
 			<input type="button" value="회원가입!" onclick="fnSignUp()">
@@ -66,11 +54,6 @@
 		if(sign.name.value.length == 0){
 			alert("이름 입력하셈");
 			sign.name.focus();
-			return;
-		}
-		if(sign.age.value.length == 0){
-			alert("나이 입력하셈");
-			sign.age.focus();
 			return;
 		}
 		if(sign.pwd1.value != sign.pwd2.value){

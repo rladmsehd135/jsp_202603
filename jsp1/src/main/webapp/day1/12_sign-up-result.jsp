@@ -9,9 +9,14 @@
 <body>
 	<%
 		String userId = request.getParameter("userId");
-	String pwd1 = request.getParameter("pwd1");
-	String name = request.getParameter("name");
-	String age = request.getParameter("age");
+		String pwd1 = request.getParameter("pwd1");
+		String name = request.getParameter("name");
+		String age = request.getParameter("age");
+		
+		String[] hobby = request.getParameterValues("hobby");
+		for(int i=0; i<hobby.length; i++){
+			out.println(hobby[i]);
+		}
 	%>
 	
 	<div>아이디 : <%=userId %></div>
